@@ -13,6 +13,14 @@
     </div>
   </div>
 
+
+  <div class="account-info-container">
+    <h3>Account Details</h3>
+    <p><strong>Name:</strong> {{ firstname }} {{ lastname }}</p>
+    <p><strong>Email:</strong> {{ gmail }}</p>
+    <p><strong>Phone:</strong> {{ mobilenumber }}</p>
+  </div>
+
   <div class="button-container">
     <button (click)="getAccountInfo()">Get Account Info</button>
     <button (click)="navigateToTransfer()">Transfer</button>
