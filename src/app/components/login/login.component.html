@@ -1,0 +1,15 @@
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (submit)="login()">
+            <label>Email</label>
+            <input formControlName="email" type="email" placeholder="Enter your email..."/>
+
+            <label>Password</label>
+            <input formControlName="password" type="password" placeholder="Enter your password..."/>
+
+            <button type="submit">Login</button>
+        </form>
+        <button (click)="navigateToRegister()">Register</button>
+    </div>
+</div>

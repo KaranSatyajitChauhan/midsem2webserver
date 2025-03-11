@@ -1,0 +1,23 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="dashboard-container">
+  <h2>Welcome to the Dashboard!</h2>
+  <!-- | currency  -->
+  <!-- | currency  -->
+  <!-- Display balance in h1 tag -->
+  <h1>Balance: {{ balance }}</h1>
+
+  <div class="balance-container">
+    <div class="balance-item">
+      <label>Final Balance:</label>
+      <span>{{ finalBalance }}</span>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button (click)="getAccountInfo()">Get Account Info</button>
+    <button (click)="navigateToTransfer()">Transfer</button>
+    <button (click)="navigateToDeposit()">Deposit</button>
+    <button (click)="navigateToWithdraw()">Withdraw</button>
+    <button (click)="navigateToTransactionHistory()">Show Transaction History</button>  
+  </div>
+</div>

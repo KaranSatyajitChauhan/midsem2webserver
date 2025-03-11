@@ -1,0 +1,49 @@
+<div class="registration-container">
+    <h2>Register</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" formControlName="firstName" placeholder="Enter first name" />
+        <span *ngIf="registrationForm.controls['firstName'].invalid && registrationForm.controls['firstName'].touched">
+          First name is required.
+        </span>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" formControlName="lastName" placeholder="Enter last name" />
+        <span *ngIf="registrationForm.controls['lastName'].invalid && registrationForm.controls['lastName'].touched">
+          Last name is required.
+        </span>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Enter email" />
+        <span *ngIf="registrationForm.controls['email'].invalid && registrationForm.controls['email'].touched">
+          Valid email is required.
+        </span>
+      </div>
+  
+      <div class="form-group">
+        <label for="mobilePhone">Mobile Number</label>
+        <input type="text" id="mobilePhone" formControlName="mobilePhone" placeholder="Enter mobile number" />
+        <span *ngIf="registrationForm.controls['mobilePhone'].invalid && registrationForm.controls['mobilePhone'].touched">
+          Mobile number is required.
+        </span>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Enter password" />
+        <span *ngIf="registrationForm.controls['password'].invalid && registrationForm.controls['password'].touched">
+          Password must be at least 6 characters.
+        </span>
+      </div>
+  
+      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+    </form>
+  
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
+  
